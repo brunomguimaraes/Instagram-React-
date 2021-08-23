@@ -14,6 +14,14 @@ const posts = [
         imagemDeQuemCurtiu: 'assets/img/adorable_animals.svg',
         nomeDeQuemCurtiu: "adorable_animals",
         quantidadeDeCurtidas: "99.159"
+    },
+    {
+        usuario: "_coelhinhos_",
+        imagemPerfil: 'assets/img/perfil_coelhinhos.jpg',
+        imagemDoPost: 'assets/img/coelhinho.jpg',
+        imagemDeQuemCurtiu: 'assets/img/meowed.svg',
+        nomeDeQuemCurtiu: "Meowed",
+        quantidadeDeCurtidas: "88.230"
     }
 ]
 
@@ -76,7 +84,7 @@ function Post (props) {
         <div class="post">
             <TopoDoPost imagemPerfil = {props.imagemPerfil} usuario = {props.usuario} />
             <ConteudoDoPost imagemDoPost = {props.imagemDoPost} />
-            <ParteInferiorDoPost imagemDeQuemCurtiu = {props.imagemDeQuemCurtiu} nomeDeQuemCurtiu = {props.nomeDeQuemCurtiu} qtd = {props.quantidadeDeCurtidas}  />
+            <ParteInferiorDoPost imagemDeQuemCurtiu = {props.imagemDeQuemCurtiu} nomeDeQuemCurtiu = {props.nomeDeQuemCurtiu} quantidadeDeCurtidas = {props.quantidadeDeCurtidas}  />
         </div>
     );
 }
