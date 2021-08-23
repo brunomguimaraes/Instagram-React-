@@ -2,12 +2,18 @@ const posts = [
     {
         usuario: "Meowed",
         imagemPerfil: 'assets/img/meowed.svg',
-        imagemDoPost: 'assets/img/gato-telefone.svg'
+        imagemDoPost: 'assets/img/gato-telefone.svg',
+        imagemDeQuemCurtiu: 'assets/img/respondeai.svg',
+        nomeDeQuemCurtiu: "respondeai",
+        quantidadeDeCurtidas: "101.523"
     },
     {
         usuario: "Barked",
         imagemPerfil: 'assets/img/barked.svg',
-        imagemDoPost: 'assets/img/dog.svg'
+        imagemDoPost: 'assets/img/dog.svg',
+        imagemDeQuemCurtiu: 'assets/img/adorable_animals.svg',
+        nomeDeQuemCurtiu: "adorable_animals",
+        quantidadeDeCurtidas: "99.159"
     }
 ]
 
@@ -33,7 +39,7 @@ function ConteudoDoPost (props) {
     );
 }
 
-function ParteInferiorDoPost () {
+function ParteInferiorDoPost (props) {
     return (
         <div class="fundo">
             <div class="acoes">
@@ -48,9 +54,9 @@ function ParteInferiorDoPost () {
             </div>
 
             <div class="curtidas">
-                <img src="assets/img/adorable_animals.svg" alt="" />
+                <img src={props.imagemDeQuemCurtiu} alt="" />
                 <div class="texto">
-                    Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>
+                    Curtido por <strong>{props.nomeDeQuemCurtiu}</strong> e <strong>outras {props.quantidadeDeCurtidas} pessoas</strong>
                 </div>
             </div>
         </div>
@@ -60,7 +66,7 @@ function ParteInferiorDoPost () {
 export default function Posts () {
     return (
         <div class="posts">
-            {posts.map((post) => (<Post usuario = {post.usuario} imagemPerfil = {post.imagemPerfil} imagemDoPost = {post.imagemDoPost}/>))} 
+            {posts.map((post) => (<Post usuario = {post.usuario} imagemPerfil = {post.imagemPerfil} imagemDoPost = {post.imagemDoPost} imagemDeQuemCurtiu = {post.imagemDeQuemCurtiu} nomeDeQuemCurtiu = {post.nomeDeQuemCurtiu} quantidadeDeCurtidas = {post.quantidadeDeCurtidas} />))} 
         </div>
     );
 }
@@ -70,7 +76,7 @@ function Post (props) {
         <div class="post">
             <TopoDoPost imagemPerfil = {props.imagemPerfil} usuario = {props.usuario} />
             <ConteudoDoPost imagemDoPost = {props.imagemDoPost} />
-            <ParteInferiorDoPost />
+            <ParteInferiorDoPost imagemDeQuemCurtiu = {props.imagemDeQuemCurtiu} nomeDeQuemCurtiu = {props.nomeDeQuemCurtiu} qtd = {props.quantidadeDeCurtidas}  />
         </div>
     );
 }
