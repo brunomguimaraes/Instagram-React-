@@ -1,10 +1,9 @@
-import Container from "./Container";
+import TopContainer from "./TopContainer";
 
 export default function Navbar () {
     return (
     <div class="navbar">
-        <Container />
+        <TopContainer />
     </div>
-
     );
 }

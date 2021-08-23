@@ -3,12 +3,12 @@ function Logo () {
         <div class="logo">
             <ion-icon name="logo-instagram"></ion-icon>
             <div class="separador"></div>
-            <img src="assets/img/logo.png" />
+            <img src="assets/img/logo.png" alt=""/>
         </div>
     );
 }
 
-function Logomobile () {
+function LogoMobile () {
     return (
         <div class="logo-mobile">
             <ion-icon name="logo-instagram"></ion-icon>
@@ -16,10 +16,10 @@ function Logomobile () {
     );
 }
 
-function Instagrammobile () {
+function InstagramMobile () {
     return (
         <div class="instagram-mobile">
-            <img src="assets/img/logo.png" />
+            <img src="assets/img/logo.png" alt="" />
         </div>
     );
 }
@@ -43,7 +43,7 @@ function Icones () {
     );
 }
 
-function Iconesmobile () {
+function IconesMobile () {
     return (
         <div class="icones-mobile">
             <ion-icon name="paper-plane-outline"></ion-icon>
@@ -53,20 +53,20 @@ function Iconesmobile () {
 
 
 
-export default function Container () {
+export default function TopContainer () {
     return (
         <div class="container">
             <Logo />
 
-            <Logomobile />
+            <LogoMobile />
 
-            <Instagrammobile />
+            <InstagramMobile />
   
             <Pesquisa />
   
             <Icones />
 
-            <Iconesmobile />
+            <IconesMobile />
         </div>
     );    
 }
